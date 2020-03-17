@@ -2,6 +2,7 @@
 
 ## About
 ![](https://i.imgur.com/BLBRc9w.png)
+
 The QRA Project, which stands for **Quasar Redshift Analysis**, aims to use a variety of machine learning techniques to approach the well-established [phometric redshift](https://en.wikipedia.org/wiki/Photometric_redshift) problem. The project's authors are [Jeffrey Tong](https://github.com/csytrn) and [Matthew Casertano](https://github.com/mcasertano). It was started as a school project and was later submitted to the 2020 ScienceMONTGOMERY Fair under the title "Modeling Quasar Redshift from UGRIZ Light Wavebands with Supervised ML". This repository is an open-source collection of all the code written for the project.
 
 ## Installation
