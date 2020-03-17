@@ -1,0 +1,12 @@
+runtimes, JHK = False
+N	100	500	1000	5000	20000	100000
+k-Neighbors Regressor	0.019	0.007	0.009	0.012	0.026	0.13
+SGD Regressor	0.025	0.009	0.01	0.036	0.071	0.261
+Ridge Regressor	0.021	0.005	0.009	0.014	0.029	0.078
+Elastic Net CV	0.926	0.76	0.834	1.304	4.463	13.575
+Random Forest Regressor	0.229	0.549	0.66	2.066	9.045	55.293
+MLP Regressor	0.019	0.066	0.838	2.021	2.767	49.312
+Gradient Boosting Regressor	0.049	0.089	0.14	0.514	1.906	9.693
+Decision Tree Regressor	0.015	0.024	0.027	0.129	0.635	3.813
+Linear SVR	0.029	0.027	0.039	0.257	2.242	17.859
+Nu SVR	0.007	0.018	0.05	0.682	13.356	192.418
