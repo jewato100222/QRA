@@ -25,7 +25,7 @@ def saveResults (results):
 	if results['N'] not in data['N']:
 		data['N'].append(results['N'])
 	data[results['name']] += [
-		round(results['ms'], 4),
+		round(results['ms'], 4), # Errors are mean squared differences
 		round(results['time'], 3)
 	]
 
@@ -33,7 +33,7 @@ def saveResults (results):
 outPath = "../output/"
 def writeOutput ():
 	for i in [0, 1]:
-		outputting = ['errors', 'runtimes'][i]
+		outputting = ['errors (mean squared)', 'runtimes'][i]
 		outputStr = outputting + ', JHK = ' + str(useJHK)
 		# Data points are spaced with tabs to allow pasting into a spreadsheet
 		outputStr += '\n' + '\t'.join(['N'] + [str(N) for N in data['N']])
