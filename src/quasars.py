@@ -10,7 +10,7 @@ def plotDistr (title, data, labels, colors, disp0 = False):
 	plt.figure(figsize = (len(labels) * 0.75, 5))
 	plt.margins(0.1)
 	plt.title(title)
-	plt.xticks(range(len(labels)), labels)
+	plt.xticks(range(len(labels)), [f'${l}$' for l in labels])
 
 	for i in range(len(labels)):
 		# Draw points
@@ -44,18 +44,19 @@ def plotRaw (quasars):
 	labels = ['mag_u', 'mag_g', 'mag_r', 'mag_i', 'mag_z', 'redshift']
 	colors = ['b', 'g', 'r', 'm', 'k', 'y']
 	if useJHK:
-		labels = ['mag_u', 'mag_g', 'mag_r', 'mag_i', 'mag_z', 'mag_J', 'mag_H', 'mag_K', 'redshift']
-		colors = ['b', 'g', 'r', 'm', 'k', '0.5', '0.5', '0.5', 'y']
+		labels[5:5] = ['mag_J', 'mag_H', 'mag_K']
+		colors[5:5] = ['0.5', '0.5', '0.5']
 	plotDistr(title, quasars, labels, colors, True)
 plotRaw(raw_data)
 
 # Plots the processed quasar data
 def plotProcessed (prcQuasars):
 	title = f"Processed quasar attributes ($N$ = {len(prcQuasars)}, with{'' if useJHK else 'out'} JHK)"
-	labels = range(len(combs))
+	# Only plot the first 10 combinations, otherwise the graph will be huge
+	labels = range(10)
 	dataDict = []
 	for i in labels:
 		dataDict.append(prcQuasars[:, i])
-	colors = ['0.5'] * len(combs)
+	colors = ['0.5'] * 10
 	plotDistr(title, dataDict, labels, colors)
 plotProcessed(featuresPre)

@@ -1,6 +1,6 @@
 """
 models.py - Helper script for main.py
-This script holds all the models and parameters that will be used for training.
+This script holds all the models and hyperparameters that will be used for training.
 """
 from imports import *
 
